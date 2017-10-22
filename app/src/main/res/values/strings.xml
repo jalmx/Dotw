@@ -3,4 +3,7 @@
 
     <string name="text_input_area">Datos separados por comas: 23, 34, 26, ...</string>
     <string name="calculate_button">Calcular datos</string>
+
+    <string name="average">Media</string>
+    <string name="mean_deviation">Desviación media</string>
 </resources>

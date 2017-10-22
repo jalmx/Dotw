@@ -4,4 +4,7 @@
 
     <string name="text_input_area">Comma separate data: 23, 34, 26, ...</string>
     <string name="calculate_button">Calculate values</string>
+
+    <string name="average">Average</string>
+    <string name="mean_deviation">Mean Deviation</string>
 </resources>
