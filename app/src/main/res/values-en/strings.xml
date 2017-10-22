@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dotw</string>
+
+    <string name="text_input_area">Comma separate data: 23, 34, 26, ...</string>
+    <string name="calculate_button">Calculate values</string>
+</resources>
