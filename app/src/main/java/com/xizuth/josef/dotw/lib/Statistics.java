@@ -22,7 +22,7 @@ public final class Statistics {
         return sum / listData.size();
     }
 
-    public static double meanDesviation(ArrayList<Double> listData, double mean){
+    public static double meanDeviation(ArrayList<Double> listData, double mean){
         double sum = 0;
 
         for (Double data : listData) {
@@ -32,7 +32,7 @@ public final class Statistics {
         return sum / listData.size();
     }
 
-    public static double meanDesviation(ArrayList<Double> listData){
+    public static double meanDeviation(ArrayList<Double> listData){
         double mean = mean(listData);
         double sum = 0;
 
