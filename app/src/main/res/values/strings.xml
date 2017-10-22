@@ -6,4 +6,8 @@
 
     <string name="average">Media</string>
     <string name="mean_deviation">Desviación media</string>
+
+    <string name="no_data">No hay datos</string>
+    <string name="error_data">Datos incorrectos</string>
+
 </resources>
