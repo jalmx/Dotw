@@ -12,12 +12,12 @@ public final class ParserDataList {
     private ParserDataList() {
     }
 
-    public static ArrayList<Double> listData(String dataText){
+    public static ArrayList<Double> listData(String dataText) {
         ArrayList<Double> data = new ArrayList<>();
 
-        StringTokenizer tokenizer = new StringTokenizer(dataText,",");
+        StringTokenizer tokenizer = new StringTokenizer(dataText, ",");
 
-        while (tokenizer.hasMoreTokens()){
+        while (tokenizer.hasMoreTokens()) {
             data.add(Double.parseDouble(tokenizer.nextToken()));
         }
 

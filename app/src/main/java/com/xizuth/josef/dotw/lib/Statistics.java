@@ -12,34 +12,24 @@ public final class Statistics {
     private Statistics() {
     }
 
-    public static double mean(ArrayList<Double> listData){
+    public static double mean(ArrayList<Double> listData) {
         double sum = 0;
 
         for (Double data : listData) {
-            sum+= data;
+            sum += data;
         }
 
         return sum / listData.size();
     }
 
-    public static double meanDeviation(ArrayList<Double> listData, double mean){
-        double sum = 0;
-
-        for (Double data : listData) {
-            sum+= Math.pow((mean - data),2);
-        }
-
-        return sum / listData.size();
-    }
-
-    public static double meanDeviation(ArrayList<Double> listData){
+    public static double meanDeviation(ArrayList<Double> listData) {
         double mean = mean(listData);
         double sum = 0;
 
         for (Double data : listData) {
-            sum+= Math.pow((mean - data),2);
+            sum += Math.pow((mean - data), 2);
         }
 
-        return sum / listData.size();
+        return Math.sqrt(sum / listData.size());
     }
 }

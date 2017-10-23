@@ -7,4 +7,7 @@
 
     <string name="average">Average</string>
     <string name="mean_deviation">Mean Deviation</string>
+
+    <string name="no_data">No data</string>
+    <string name="error_data">Incorrect data</string>
 </resources>
