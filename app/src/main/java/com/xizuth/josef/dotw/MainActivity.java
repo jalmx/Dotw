@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.xizuth.josef.dotw.admob.AdMob;
 import com.xizuth.josef.dotw.lib.ParserDataList;
 import com.xizuth.josef.dotw.lib.Statistics;
 
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Button calculateButton;
     private TextView meanText, deviationText, intervalText;
     private EditText dataText;
+    private AdMob adMob;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         initViews();
         actionButton();
         actionEditText();
+        adMob = new AdMob(this);
     }
 
     private void initViews() {
@@ -132,6 +135,24 @@ public class MainActivity extends AppCompatActivity {
 
     private void clearError() {
         dataText.setError(null);
+    }
+
+    @Override
+    protected void onPause() {
+        adMob.pauseAdMob();
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        adMob.resumeAdMob();
+        super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        adMob.destroyAdMob();
+        super.onDestroy();
     }
 
 }

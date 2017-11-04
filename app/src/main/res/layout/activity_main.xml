@@ -18,22 +18,28 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/data_text"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/space_padding"
-                android:hint="@string/text_input_area"
-                android:imeOptions="actionDone"
-                android:inputType="number|numberSigned|numberDecimal|datetime" />
+                android:orientation="vertical">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/calculate_button"
-                android:background="@color/colorAccent"
-                android:text="@string/calculate_button"
-                android:textColor="@color/primaryText" />
+                <EditText
+                    android:id="@+id/data_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_padding"
+                    android:hint="@string/text_input_area"
+                    android:imeOptions="actionDone"
+                    android:inputType="number|numberSigned|numberDecimal|datetime" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/calculate_button"
+                    android:background="@color/colorAccent"
+                    android:text="@string/calculate_button"
+                    android:textColor="@color/primaryText" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -67,6 +73,14 @@
                     android:textStyle="bold"/>
 
             </LinearLayout>
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/app_unit_id" />
         </LinearLayout>
 
     </ScrollView>
