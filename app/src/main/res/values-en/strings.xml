@@ -10,4 +10,6 @@
 
     <string name="no_data">No data</string>
     <string name="error_data">Incorrect data</string>
+    <string name="app_id">ca-app-pub-1366168498409484~2436874236</string>
+    <string name="app_unit_id">ca-app-pub-1366168498409484/5867130583</string>
 </resources>
