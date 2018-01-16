@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <item
+        android:id="@+id/item_clear"
+        android:title="@string/text_item_clear"
+
+        android:icon="@drawable/icon_delete"
+        app:showAsAction="always" />
+<!--
+    <item
+        android:id="@+id/item_formula"
+        android:title="@string/text_item_formula" />
+    <item
+        android:id="@+id/item_about"
+        android:title="@string/text_item_about" />
+        -->
 </menu>

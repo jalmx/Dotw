@@ -2,6 +2,9 @@
 <resources>
     <string name="app_name">Dotw</string>
 
+    <string name="title_activity_main">Ingrese sus datos</string>
+    <string name="subtitle_hint_activity_main">Datos separados por coma</string>
+
     <string name="text_input_area">Datos separados por comas: 23, 34, 26, ...</string>
     <string name="calculate_button">Calcular valores</string>
 
@@ -10,4 +13,12 @@
 
     <string name="no_data">No hay datos</string>
     <string name="error_data">Datos incorrectos</string>
+
+    <!-- name activities-->
+    <string name="title_activity_about" >Acerca de</string>
+
+    <!-- menu main-->
+    <string name="text_item_clear">Limpiar</string>
+    <string name="text_item_formula">Formula</string>
+    <string name="text_item_about">Acerca de</string>
 </resources>
