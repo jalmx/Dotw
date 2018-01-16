@@ -50,7 +50,7 @@ public final class Statistics {
         return Math.sqrt(varianza);
     }
 
-    public static double covariance(ArrayList<Double> listData) {
+    public static double covariance(List<Double> listData) {
         return meanDeviation(listData) / mean(listData);
     }
 
