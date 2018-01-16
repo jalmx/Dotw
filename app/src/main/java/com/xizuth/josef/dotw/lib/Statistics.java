@@ -35,7 +35,7 @@ public final class Statistics {
         return Math.sqrt(sum / listData.size());
     }
 
-    public static double variance(List<Double> listData){
+    public static double variance(List<Double> listData) {
         double mean = mean(listData);
         double sum = 0;
 
@@ -46,7 +46,7 @@ public final class Statistics {
         return sum / listData.size();
     }
 
-    public static double meanDeviation(double varianza){
+    public static double meanDeviation(double varianza) {
         return Math.sqrt(varianza);
     }
 
@@ -77,6 +77,13 @@ public final class Statistics {
     }
 
     public static double median(ArrayList<Double> listData) {
+
+        if (listData.size() <= 1) {
+            return 0.0;
+        }
+        if (listData.size() == 2) {
+            return (listData.get(0) + listData.get(1)) / 2;
+        }
 
         double median;
 
