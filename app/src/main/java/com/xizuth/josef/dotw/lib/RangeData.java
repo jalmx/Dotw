@@ -1,7 +1,5 @@
 package com.xizuth.josef.dotw.lib;
 
-import android.util.Log;
-
 import java.util.List;
 
 public class RangeData {
@@ -15,15 +13,14 @@ public class RangeData {
 
     private RangeData(List<Double> dataList) {
         this.dataList = dataList;
-        calculateData();
     }
 
     public static synchronized RangeData getInstance(List<Double> dataList) {
 
         if (rangeData == null) {
-            rangeData = new RangeData(dataList);
+            rangeData = new RangeData(null);
         }
-
+        rangeData.dataList = dataList;
         return rangeData;
     }
 
@@ -37,26 +34,25 @@ public class RangeData {
             if (d > max) {
                 max = d;
             }
-            Log.e("RANGE", "dato: " + d);
         }
 
         this.minData = min;
         this.maxData = max;
         this.range = max - min;
-        Log.e("RANGE", "min: " + min);
-        Log.e("RANGE", "max: " + max);
-        Log.e("RANGE", "range: " + range);
     }
 
     public double getMaxData() {
+        calculateData();
         return maxData;
     }
 
     public double getMinData() {
+        calculateData();
         return minData;
     }
 
     public double getRange() {
+        calculateData();
         return range;
     }
 
