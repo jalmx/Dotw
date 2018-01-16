@@ -1,13 +1,40 @@
-# Dots
+# Dotw
 
-Small app for calculate average and mean deviation Android
+<img src="https://github.com/jalmx89/Dotw/blob/master/screenshot/logo.png" alt= "logo dotw" width="100">
+
+Small app for calculate very useful for calculate many values for statistics, using a dataset like:
+
+ - Mean (Average)
+ - Median
+ - Mode
+ 
+ 
+ - Mean Deviation
+ - Variance
+ - Coefficient of variation (CV)
+ 
+ - Range of values
+ - Max value
+ - Min value
+ 
+ And a plus, calculate:
+ - mean + mean deviation
+ - mean - mean deviation
+
+ 
+ -
+ 
+<p>
+Screenshot 
+</p>
+<img src ="https://github.com/jalmx89/Dotw/blob/master/screenshot/v2/device_0-v2.png" alt="view when start the app">
 
 <p>
-Screenshot one
+Screenshot 
 </p>
-<img src ="https://raw.githubusercontent.com/jalmx89/Dots/master/screenshot/device-2017-10-22-201417.png" alt="view when start the app">
+<img src ="https://github.com/jalmx89/Dotw/blob/master/screenshot/v2/device_1-v2.png" alt="view with data loaded and calculate">
 
 <p>
-Screenshot two
+Screenshot 
 </p>
-<img src ="https://raw.githubusercontent.com/jalmx89/Dots/master/screenshot/device-2017-10-22-201537.png" alt="view with data loaded and calculate">
+<img src ="https://github.com/jalmx89/Dotw/blob/master/screenshot/v2/device_2-v2.png" alt="view with data loaded and calculate">
