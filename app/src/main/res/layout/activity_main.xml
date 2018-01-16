@@ -23,22 +23,36 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/data_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/space_padding"
-                    android:hint="@string/text_input_area"
-                    android:imeOptions="actionDone"
-                    android:inputType="number|numberSigned|numberDecimal|datetime" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/calculate_button"
-                    android:background="@color/colorAccent"
-                    android:text="@string/calculate_button"
-                    android:textColor="@color/primaryText" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryText"
+                android:textSize="@dimen/title_text"
+                android:textStyle="bold"
+                android:text="@string/title_activity_main"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/subtitle_hint_activity_main"
+                android:layout_marginBottom="@dimen/space_padding_qu"/>
+
+            <EditText
+                android:id="@+id/data_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_padding"
+                android:hint="@string/text_input_area"
+
+                android:inputType="textMultiLine|number|numberSigned|numberDecimal" />
+
+            <Button
+                android:id="@+id/calculate_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:text="@string/calculate_button"
+                android:textColor="@color/primaryText" />
             </LinearLayout>
 
             <LinearLayout
@@ -48,41 +62,78 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/n_data"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/result_text" />
+
+                <TextView
                     android:id="@+id/mean_text"
+                    android:layout_marginTop="@dimen/space_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/result_text" />
+                <TextView
+                    android:id="@+id/median_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/result_text" />
+                <TextView
+                    android:id="@+id/mode_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/primaryText"
                     android:textSize="@dimen/result_text" />
 
                 <TextView
-                    android:id="@+id/deviation_text"
+                    android:id="@+id/mean_deviation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/space_padding"
                     android:textColor="@color/primaryText"
                     android:textSize="@dimen/result_text" />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/result_text"
+                    android:id="@+id/variance_text"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/result_text"
+                    android:id="@+id/cv_text"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/result_text"
+                    android:layout_marginTop="@dimen/space_padding"
+                    android:id="@+id/range_text"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/interval_text"
                     android:layout_marginTop="@dimen/space_padding"
-                    android:gravity="center"
                     android:textColor="@color/primaryText"
-                    android:textSize="@dimen/result_text"
-                    android:textStyle="bold"/>
+                    android:textSize="@dimen/result_text" />
 
             </LinearLayout>
 
             <com.google.android.gms.ads.AdView
                 xmlns:ads="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/adView"
+                android:paddingTop="@dimen/space_padding_qu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 ads:adSize="BANNER"
                 ads:adUnitId="@string/app_unit_id" />
         </LinearLayout>
-
     </ScrollView>
 
 </android.support.design.widget.CoordinatorLayout>

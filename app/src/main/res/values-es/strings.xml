@@ -2,14 +2,33 @@
 <resources>
     <string name="app_name">Dotw</string>
 
+    <string name="title_activity_main">Ingrese sus datos</string>
+    <string name="subtitle_hint_activity_main">Datos separados por coma</string>
+
     <string name="text_input_area">Datos separados por comas: 23, 34, 26, ...</string>
-    <string name="calculate_button">Calculate values</string>
+    <string name="calculate_button">Calcular valores</string>
 
     <string name="average">Media</string>
-    <string name="mean_deviation">Desviación media</string>
+    <string name="mean_deviation">Desviación Media</string>
+    <string name="median">Media</string>
+    <string name="mode">Moda</string>
+    <string name="variance">Varianza</string>
+    <string name="cv">CV</string>
+    <string name="mean_mean_deviation">M + DV</string>
+    <string name="range">Rango</string>
+    <string name="max">Max</string>
+    <string name="min">Min</string>
 
     <string name="no_data">No hay datos</string>
     <string name="error_data">Datos incorrectos</string>
     <string name="app_id">ca-app-pub-1366168498409484~2436874236</string>
     <string name="app_unit_id">ca-app-pub-1366168498409484/5867130583</string>
+
+    <!-- name activities-->
+    <string name="title_activity_about" >Acerca de</string>
+
+    <!-- menu main-->
+    <string name="text_item_clear">Limpiar</string>
+    <string name="text_item_formula">Formula</string>
+    <string name="text_item_about">Acerca de</string>
 </resources>

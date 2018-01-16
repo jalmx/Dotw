@@ -1,14 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Dotw</string>
 
-    <string name="text_input_area">Datos separados por comas: 23, 34, 26, ...</string>
-    <string name="calculate_button">Calcular datos</string>
+    <string name="title_activity_main">Input data</string>
+    <string name="subtitle_hint_activity_main">Comma separate data</string>
 
-    <string name="average">Media</string>
-    <string name="mean_deviation">Desviación media</string>
+    <string name="text_input_area">Comma separate data: 23, 34, 26, ...</string>
+    <string name="calculate_button">Calculate values</string>
 
-    <string name="no_data">No hay datos</string>
-    <string name="error_data">Datos incorrectos</string>
+    <string name="average">Average</string>
+    <string name="mean_deviation">Mean Deviation</string>
+    <string name="median">Median</string>
+    <string name="mode">Mode</string>
+    <string name="variance">Variance</string>
+    <string name="cv">CV</string>
+    <string name="mean_mean_deviation">M + MD</string>
+    <string name="range">Range</string>
+    <string name="max">Max</string>
+    <string name="min">Min</string>
+
+    <string name="no_data">No data</string>
+    <string name="error_data">Incorrect data</string>
+
+    <!-- name activities-->
+    <string name="title_activity_about" >About</string>
+
+    <!-- menu main-->
+    <string name="text_item_clear">Clear</string>
+    <string name="text_item_formula">Formula</string>
+    <string name="text_item_about">About</string>
 
     <string name="app_id">ca-app-pub-1366168498409484~2436874236</string>
     <string name="app_unit_id">ca-app-pub-1366168498409484/5867130583</string>
