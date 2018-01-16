@@ -22,19 +22,10 @@ Small app for calculate very useful for calculate many values for statistics, us
  - mean - mean deviation
 
  
- -
- 
-<p>
-Screenshot 
-</p>
+ ## Screenshots
+
 <img src ="https://github.com/jalmx89/Dotw/blob/master/screenshot/v2/device_0-v2.png" alt="view when start the app">
 
-<p>
-Screenshot 
-</p>
 <img src ="https://github.com/jalmx89/Dotw/blob/master/screenshot/v2/device_1-v2.png" alt="view with data loaded and calculate">
 
-<p>
-Screenshot 
-</p>
 <img src ="https://github.com/jalmx89/Dotw/blob/master/screenshot/v2/device_2-v2.png" alt="view with data loaded and calculate">
