@@ -1,6 +1,7 @@
 package com.xizuth.josef.dotw.lib;
 
-import java.util.ArrayList;
+import android.util.Log;
+
 import java.util.List;
 
 public class RangeData {
@@ -27,7 +28,7 @@ public class RangeData {
     }
 
     private void calculateData() {
-        double min = dataList.get(0), max =dataList.get(0);
+        double min = dataList.get(0), max = dataList.get(0);
 
         for (Double d : dataList) {
             if (d < min) {
@@ -36,15 +37,18 @@ public class RangeData {
             if (d > max) {
                 max = d;
             }
+            Log.e("RANGE", "dato: " + d);
         }
 
         this.minData = min;
         this.maxData = max;
         this.range = max - min;
+        Log.e("RANGE", "min: " + min);
+        Log.e("RANGE", "max: " + max);
+        Log.e("RANGE", "range: " + range);
     }
 
     public double getMaxData() {
-
         return maxData;
     }
 
