@@ -35,6 +35,21 @@ public final class Statistics {
         return Math.sqrt(sum / listData.size());
     }
 
+    public static double variance(List<Double> listData){
+        double mean = mean(listData);
+        double sum = 0;
+
+        for (Double data : listData) {
+            sum += Math.pow((mean - data), 2);
+        }
+
+        return sum / listData.size();
+    }
+
+    public static double meanDeviation(double varianza){
+        return Math.sqrt(varianza);
+    }
+
     public static double covariance(ArrayList<Double> listData) {
         return meanDeviation(listData) / mean(listData);
     }
