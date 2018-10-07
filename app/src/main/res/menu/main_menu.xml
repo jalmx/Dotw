@@ -8,12 +8,15 @@
 
         android:icon="@drawable/icon_delete"
         app:showAsAction="always" />
-<!--
+
     <item
-        android:id="@+id/item_formula"
-        android:title="@string/text_item_formula" />
+        android:id="@+id/item_more_apps"
+        android:title="@string/text_item_more_apps" />
+    <item
+        android:id="@+id/item_donate"
+        android:title="@string/text_item_donate" />
     <item
         android:id="@+id/item_about"
         android:title="@string/text_item_about" />
-        -->
+
 </menu>

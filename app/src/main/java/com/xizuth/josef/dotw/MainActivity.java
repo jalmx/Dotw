@@ -14,12 +14,13 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.xizuth.josef.dotw.admob.AdMob;
 import com.xizuth.josef.dotw.lib.ParserDataList;
 import com.xizuth.josef.dotw.lib.RangeData;
 import com.xizuth.josef.dotw.lib.Statistics;
+import com.xizuth.josef.dotw.util.OpenURL;
+import com.xizuth.josef.dotw.util.URL;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,13 +49,14 @@ public class MainActivity extends AppCompatActivity {
         initViews();
         actionButton();
         actionEditText();
+        cards(false);
         adMob = new AdMob(this);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_manu, menu);
+        inflater.inflate(R.menu.main_menu, menu);
         return true;
     }
 
@@ -65,12 +67,15 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item_clear:
                 clearUI();
                 return true;
-            /*case R.id.item_formula:
-
+            case R.id.item_more_apps:
+                OpenURL.open(this, URL.APPS);
                 return true;
+            case R.id.item_donate:
+                OpenURL.open(this,URL.DONATE);
+              return true;
             case R.id.item_about:
-
-              return true;*/
+                OpenURL.open(this, URL.XIZUTH_WEB);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -123,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void calculateValues() {
         clearError();
+        cards(true);
         String textRaw = dataText.getText().toString();
 
         if (!textRaw.isEmpty()) {
@@ -152,11 +158,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void clearUI() {
+
         TextView[] textViews = {dataText, nDataText, meanText, medianText, modeText, varianceText,
                 deviationText, cvText, rangeText, intervalText};
         for (TextView tv: textViews){
             tv.setText("");
         }
+        cards(false);
     }
 
     private void messageError(int typeError) {
@@ -254,6 +262,18 @@ public class MainActivity extends AppCompatActivity {
         intervalText.setText(textInterval);
     }
 
+    private void cards(boolean status){
+
+        if (status){
+            findViewById(R.id.card_central_tendency).setVisibility(View.VISIBLE);
+            findViewById(R.id.card_dispersion).setVisibility(View.VISIBLE);
+            findViewById(R.id.card_other).setVisibility(View.VISIBLE);
+        }else {
+            findViewById(R.id.card_central_tendency).setVisibility(View.GONE);
+            findViewById(R.id.card_dispersion).setVisibility(View.GONE);
+            findViewById(R.id.card_other).setVisibility(View.GONE);
+        }
+    }
     private void clearError() {
         dataText.setError(null);
     }

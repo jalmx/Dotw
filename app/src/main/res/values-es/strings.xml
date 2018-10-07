@@ -5,7 +5,7 @@
     <string name="title_activity_main">Ingrese sus datos</string>
     <string name="subtitle_hint_activity_main">Datos separados por coma</string>
 
-    <string name="text_input_area">Datos separados por comas: 23, 34, 26, ...</string>
+    <string name="text_input_area">Datos separados por comas: 23, 34, 26, &#8230;</string>
     <string name="calculate_button">Calcular valores</string>
 
     <string name="average">Media</string>
@@ -27,8 +27,13 @@
     <!-- name activities-->
     <string name="title_activity_about" >Acerca de</string>
 
+    <string name="title_card_central_tendency">Tendencia Central</string>
+    <string name="title_card_dispersion">Dispersión</string>
+    <string name="title_card_other">Otros</string>
     <!-- menu main-->
     <string name="text_item_clear">Limpiar</string>
     <string name="text_item_formula">Formula</string>
     <string name="text_item_about">Acerca de</string>
+    <string name="text_item_more_apps">More apps</string>
+    <string name="text_item_donate">Donate</string>
 </resources>

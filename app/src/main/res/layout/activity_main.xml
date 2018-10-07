@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="@dimen/space_padding"
-        android:layout_marginRight="@dimen/space_padding"
-        android:layout_marginTop="@dimen/space_padding">
+        android:layout_marginTop="@dimen/space_padding"
+        android:layout_marginRight="@dimen/space_padding">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,116 +23,192 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_activity_main"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/title_text"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/primaryText"
-                android:textSize="@dimen/title_text"
-                android:textStyle="bold"
-                android:text="@string/title_activity_main"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/subtitle_hint_activity_main"
-                android:layout_marginBottom="@dimen/space_padding_qu"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_padding_qu"
+                    android:text="@string/subtitle_hint_activity_main" />
 
-            <EditText
-                android:id="@+id/data_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/space_padding"
-                android:hint="@string/text_input_area"
+                <EditText
+                    android:id="@+id/data_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_padding"
+                    android:hint="@string/text_input_area"
+                    android:inputType="textMultiLine|number|numberSigned|numberDecimal" />
 
-                android:inputType="textMultiLine|number|numberSigned|numberDecimal" />
-
-            <Button
-                android:id="@+id/calculate_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
-                android:text="@string/calculate_button"
-                android:textColor="@color/primaryText" />
+                <Button
+                    android:id="@+id/calculate_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:text="@string/calculate_button"
+                    android:textColor="@color/primaryText" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/space_padding"
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:id="@+id/n_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/space_padding_half"
+                    android:paddingLeft="@dimen/space_padding_half"
                     android:textColor="@color/primaryText"
                     android:textSize="@dimen/result_text" />
 
-                <TextView
-                    android:id="@+id/mean_text"
-                    android:layout_marginTop="@dimen/space_padding"
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/primaryText"
-                    android:textSize="@dimen/result_text" />
-                <TextView
-                    android:id="@+id/median_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/primaryText"
-                    android:textSize="@dimen/result_text" />
-                <TextView
-                    android:id="@+id/mode_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/primaryText"
-                    android:textSize="@dimen/result_text" />
+                    android:clipToPadding="false"
+                    app:cardCornerRadius="@dimen/space_padding_half"
+                    app:cardElevation="@dimen/space_padding_qu"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/card_central_tendency">
 
-                <TextView
-                    android:id="@+id/mean_deviation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/space_padding"
-                    android:textColor="@color/primaryText"
-                    android:textSize="@dimen/result_text" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="@dimen/space_padding_qu">
 
-                <TextView
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_card_central_tendency"
+                            android:background="@color/colorPrimary"
+                            android:textColor="@color/icons"/>
+
+                        <TextView
+                            android:id="@+id/mean_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primaryText"
+                            android:textSize="@dimen/result_text" />
+
+                        <TextView
+                            android:id="@+id/median_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primaryText"
+                            android:textSize="@dimen/result_text" />
+
+                        <TextView
+                            android:id="@+id/mode_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primaryText"
+                            android:textSize="@dimen/result_text" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/primaryText"
-                    android:textSize="@dimen/result_text"
-                    android:id="@+id/variance_text"/>
-                <TextView
+                    android:clipToPadding="false"
+                    app:cardCornerRadius="@dimen/space_padding_half"
+                    app:cardElevation="@dimen/space_padding_qu"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/card_dispersion">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="@dimen/space_padding_qu">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_card_dispersion"
+                            android:background="@color/colorPrimary"
+                            android:textColor="@color/icons"/>
+
+                        <TextView
+                            android:id="@+id/mean_deviation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primaryText"
+                            android:textSize="@dimen/result_text" />
+
+                        <TextView
+                            android:id="@+id/variance_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primaryText"
+                            android:textSize="@dimen/result_text" />
+
+                        <TextView
+                            android:id="@+id/cv_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primaryText"
+                            android:textSize="@dimen/result_text" />
+
+                        <TextView
+                            android:id="@+id/range_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primaryText"
+                            android:textSize="@dimen/result_text" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/primaryText"
-                    android:textSize="@dimen/result_text"
-                    android:id="@+id/cv_text"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/primaryText"
-                    android:textSize="@dimen/result_text"
-                    android:layout_marginTop="@dimen/space_padding"
-                    android:id="@+id/range_text"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/interval_text"
-                    android:layout_marginTop="@dimen/space_padding"
-                    android:textColor="@color/primaryText"
-                    android:textSize="@dimen/result_text" />
+                    android:clipToPadding="false"
+                    app:cardCornerRadius="@dimen/space_padding_half"
+                    app:cardElevation="@dimen/space_padding_qu"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/card_other">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="@dimen/space_padding_qu">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_card_other"
+                            android:background="@color/colorPrimary"
+                            android:textColor="@color/icons"/>
+
+                        <TextView
+                            android:id="@+id/interval_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primaryText"
+                            android:textSize="@dimen/result_text" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
 
             </LinearLayout>
 
-            <com.google.android.gms.ads.AdView
-                xmlns:ads="http://schemas.android.com/apk/res-auto"
+            <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/adView"
-                android:paddingTop="@dimen/space_padding_qu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_padding"
+                android:paddingTop="@dimen/space_padding_qu"
                 ads:adSize="BANNER"
                 ads:adUnitId="@string/app_unit_id" />
+
         </LinearLayout>
     </ScrollView>
 
