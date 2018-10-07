@@ -18,6 +18,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,6 +53,7 @@
                 android:background="@color/colorAccent"
                 android:text="@string/calculate_button"
                 android:textColor="@color/primaryText" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -117,6 +124,15 @@
                     android:textSize="@dimen/result_text" />
 
             </LinearLayout>
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:paddingTop="@dimen/space_padding_qu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/app_unit_id" />
         </LinearLayout>
     </ScrollView>
 

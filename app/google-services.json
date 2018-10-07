@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "862030619021",
+    "firebase_url": "https://dotw-app.firebaseio.com",
+    "project_id": "dotw-app",
+    "storage_bucket": "dotw-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862030619021:android:991767a3e67a4304",
+        "android_client_info": {
+          "package_name": "com.xizuth.josef.dotw"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "862030619021-f7h5fgonato3ka1lkiu2vo1akokgvgt4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqXZnLiu5Zn-0FTLpRAR9VUMHmBX8IReA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

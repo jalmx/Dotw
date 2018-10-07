@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.xizuth.josef.dotw.admob.AdMob;
 import com.xizuth.josef.dotw.lib.ParserDataList;
 import com.xizuth.josef.dotw.lib.RangeData;
 import com.xizuth.josef.dotw.lib.Statistics;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
             rangeText;
     private EditText dataText;
     private TextView nDataText;
+    private AdMob adMob;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         initViews();
         actionButton();
         actionEditText();
+        adMob = new AdMob(this);
     }
 
     @Override
@@ -253,6 +256,24 @@ public class MainActivity extends AppCompatActivity {
 
     private void clearError() {
         dataText.setError(null);
+    }
+
+    @Override
+    protected void onPause() {
+        adMob.pauseAdMob();
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        adMob.resumeAdMob();
+        super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        adMob.destroyAdMob();
+        super.onDestroy();
     }
 
 }
